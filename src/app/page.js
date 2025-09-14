@@ -1,8 +1,15 @@
-export default function HomePage() {
+import Companies from "@/sections/Companies";
+import Footer from "@/sections/Footer";
+import Hero from "@/sections/Hero";
+import Posts from "@/sections/Posts";
+
+export default function Home() {
   return (
-    <div>
-      {/* <h1>Hello, T&P Portal 👋</h1>
-      <p>This is the homepage.</p> */}
-    </div>
+    <>
+      <Hero />
+      <Posts />
+      <Companies />
+      <Footer />
+    </>
   );
 }
