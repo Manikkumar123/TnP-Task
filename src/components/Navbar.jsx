@@ -65,7 +65,7 @@
 
     return (
       <>
-        <nav className="fixed top-3 z-50 w-full transition-all">
+        <nav className="fixed top-3 z-100 w-full transition-all">
           <div className="navbar h-[5.5vw] w-[90vw] mx-auto rounded-3xl bg-white/50 backdrop-blur border border-white/20">
             <div className="container flex justify-between items-center h-full px-5">
               <div className="img_container flex items-center gap-6 text-black uppercase">

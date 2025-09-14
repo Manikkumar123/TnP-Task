@@ -69,7 +69,7 @@ const allPosts = [
     description: "A new internship opportunity has been posted on the portal.",
     date: "Sept 20, 2025",
     importance: "High",
-    image: "/images/Post_4.webp",
+    image: "/images/Post_2.webp",
   },
   {
     id:'6',
@@ -77,7 +77,7 @@ const allPosts = [
     description: "Dr. Smith will be giving a talk on the future of blockchain technology.",
     date: "Oct 01, 2025",
     importance: "Medium",
-    image: "/images/Post_5.webp",
+    image: "/images/holiday.webp",
   },
   {
     id:'7',
