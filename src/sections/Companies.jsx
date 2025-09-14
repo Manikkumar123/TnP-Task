@@ -10,7 +10,6 @@ function Companies() {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    // Define the animation setup in a function
     const setupAnimation = () => {
       const pin = gsap.fromTo(
         sectionRef.current,
@@ -18,7 +17,7 @@ function Companies() {
           translateX: 0,
         },
         {
-          translateX: "-300vw", // Note: Ensure this value matches your content. If you have 6 sections, you'll scroll 5 sections past the first one. -500vw might be more accurate. Let's assume you have fewer sections visible in the snippet.
+          translateX: "-300vw",
           ease: "none",
           duration: 1,
           scrollTrigger: {
@@ -27,26 +26,25 @@ function Companies() {
             end: "2000 top",
             scrub: 0.6,
             pin: true,
-            // It's a good practice to refresh on resize as well
-            onUpdate: self => console.log("progress:", self.progress.toFixed(3)), // for debugging
-            invalidateOnRefresh: true, // This is crucial for responsive designs
+            onUpdate: self => console.log("progress:", self.progress.toFixed(3)), 
+            invalidateOnRefresh: true,
           },
         }
       );
       return pin;
     };
 
-    // This function will handle calling refresh
+  
     const handleRefresh = () => {
         ScrollTrigger.refresh();
     };
     
-    // Set up the animation after all assets are loaded
+    
     window.addEventListener("load", handleRefresh);
 
     const pinAnimation = setupAnimation();
 
-    // The cleanup function is crucial to prevent memory leaks
+   
     return () => {
       pinAnimation.kill();
       window.removeEventListener("load", handleRefresh);

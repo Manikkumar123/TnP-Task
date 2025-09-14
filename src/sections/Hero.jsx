@@ -13,7 +13,6 @@ const Hero = () => {
 
   useEffect(() => {
     if (heroRef.current && overlayRef.current && scrollDivRef.current) {
-      // Hero image scroll animation
       gsap.to(heroRef.current, {
         scale: 0.95,
         rotate: 2,
@@ -26,7 +25,7 @@ const Hero = () => {
         },
       });
 
-      // Overlay fade animation
+  
       gsap.to(overlayRef.current, {
         opacity: 0.6,
         ease: "power1.out",
@@ -38,7 +37,6 @@ const Hero = () => {
         },
       });
 
-      // Immediate clip-path reveal animation for "Scroll to Explore"
       gsap.to(scrollDivRef.current, {
         duration: 1.2,
         ease: "power2.out",
